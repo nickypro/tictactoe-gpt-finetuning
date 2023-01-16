@@ -85,23 +85,19 @@ class BoardState:
         # convert string to state
         raise NotImplementedError
 
-class TicTacToe:
-    """ A class to generate random tic tac toe games """
-    def __init__(self):
-        self.board = BoardState()
+def __init__(self):
+    self.board = BoardState()
 
-    def generate_random_game(self):
-        b = BoardState()
-        game_state_history = [ str(b) ]
-        for t in range(9):
-            valid_moves = b.get_valid_moves()
-            move = np.random.choice(len(valid_moves))
-            b.make_move(*valid_moves[move])
-            game_state_history.append( str(b) )
+def generate_random_game():
+    b = BoardState()
+    game_state_history = [ str(b) ]
+    for t in range(9):
+        valid_moves = b.get_valid_moves()
+        move = np.random.choice(len(valid_moves))
+        b.make_move(*valid_moves[move])
+        game_state_history.append( str(b) )
 
-        return "Let's play Tic Tac Toe:\n" + "\n".join(game_state_history)
+    return "Let's play Tic Tac Toe:\n" + "\n".join(game_state_history)
 
-    def generate_n_games(self, n):
-        return [ self.generate_random_game() for _ in range(n) ]
-
-tictactoe = TicTacToe()
+def generate_n_games(n):
+    return [ generate_random_game() for _ in range(n) ]
