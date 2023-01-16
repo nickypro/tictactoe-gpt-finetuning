@@ -9,8 +9,10 @@ class BoardState:
         self.o = 2
         self.x_str = 'x'
         self.o_str = 'o'
+        self.blank_str = '-'
         self.board_state = self.blank*np.ones((3,3))
         self.map = {self.x:'x', self.o:'o', self.blank: '-'}
+        self.reverse_map = {'x':self.x, 'o':self.o, '-':self.blank}
 
     def get_valid_moves(self):
         ''' return a list of valid (i,j,player) moves '''
@@ -35,6 +37,9 @@ class BoardState:
 
     def make_move(self, i, j, player):
         # check if legal
+        if isinstance(player, str):
+            player = self.reverse_map[player]
+
         if i >= 3 or i < 0 or j >= 3 or j < 0:
             print("Index out of bounds")
         elif self.board_state[i,j] != self.blank:
