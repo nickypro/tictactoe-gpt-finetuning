@@ -1,4 +1,4 @@
 dist/*
 build/*
-tictactoe-gpt-finetuning.egg-info/*
-tictactoe-gpt-finetuning/__pycache__/*
+tictactoe_gpt_finetuning.egg-info/*
+tictactoe_gpt_finetuning/__pycache__/*
