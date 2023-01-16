@@ -141,7 +141,7 @@ def compare_tictactoe_predictions(gpt: Model):
     print( "|%8s|%8s|" % (left_str, right_str) )
     return
 
-def fine_tune(gpt: Model, n_epochs: int = 1, batch_size: int = 20):
+def finetune(gpt: Model, n_epochs: int = 1, batch_size: int = 20):
     for epoch in range(n_epochs):
         texts = tictactoe.generate_n_games(batch_size)
         loss = gpt.learn(texts)
@@ -156,7 +156,7 @@ if __name__ == "__main__":
 
     # Fine tune the model
     t0 = time.time()
-    fine_tune(_gpt, n_epochs=100, batch_size=16)
+    finetune(_gpt, n_epochs=100, batch_size=16)
     print( time.time() - t0 )
 
     # Look at what outputs look like after training
