@@ -1,0 +1,3 @@
+dist/*
+tictactoe.egg-info/*
+tictactoe/__pycache__/*
