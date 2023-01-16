@@ -5,7 +5,7 @@ with open("README.rst") as f:
 
 kwargs = {
     "name": "tictactoe-gpt-finetuning",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Python tic tac toe state generator.",
     "author": "Nicky Pochinkov",
     "author_email": "work@nicky.pro",
@@ -13,7 +13,7 @@ kwargs = {
     "license": "MIT",
     "keywords": ["tictactoe", "llm", "language-models"],
     "install_requires": ["numpy"],
-    "packages": ["tictactoe-gpt-finetuning"],
+    "packages": ["tictactoe_gpt_finetuning"],
     "long_description": readme,
 }
 
