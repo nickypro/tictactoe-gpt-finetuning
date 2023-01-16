@@ -16,9 +16,16 @@ import tictactoe_gpt_finetuning as tictactoe
 print( tictactoe.generate_n_games() )
 ```
 
-- Initialize and use the game board:
+- Initialize and use the game board to place in top left:
 ```
 import tictactoe_gpt_finetuning as tictactoe
 b = tictactoe.BoardState()
 b.make_move( 0, 0, 'x' )
+print( b )
+```
+Output:
+```
+ x - -
+ - - -
+ - - -
 ```
