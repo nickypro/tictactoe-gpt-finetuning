@@ -5,7 +5,7 @@ with open("README.rst") as f:
 
 kwargs = {
     "name": "tictactoe-gpt-finetuning",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Python tic tac toe state generator and GPT fine tuning",
     "author": "Nicky Pochinkov",
     "author_email": "work@nicky.pro",
