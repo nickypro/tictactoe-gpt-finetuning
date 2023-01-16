@@ -5,33 +5,36 @@ Simple python implementation of Tic Tac Toe.
 
 Designed to make GPT able to recognize valid moves in Tic Tac Toe
 
-# Examples
-==========
-- Generate a game:
-```
+::
 
-import tictactoe*gpt*finetuning as tictactoe
+   $ pip install tictactoe-gpt-finetuning
 
-print( tictactoe.generate*random*game() )
+Examples
+--------
 
-```
+Generate a game:
 
-- generate many games:
-```
+.. code:: python
 
-import tictactoe*gpt*finetuning as tictactoe
+    import tictactoe_gpt_finetuning as tictactoe
+    print( tictactoe.generate_random_game() )
 
-print( tictactoe.generate*n*games() )
+Generate many games:
 
-```
+.. code:: python
 
-- Initialize and use the game board:
-```
+    import tictactoe_gpt_finetuning as tictactoe
+    print( tictactoe.generate_n_games() )
 
-import tictactoe*gpt*finetuning as tictactoe
+Initialize and use the game board to place in top left:
 
-b = tictactoe.BoardState()
+.. code:: python
 
-b.make_move( 0, 0, 'x' )
-
-```
+    import tictactoe_gpt_finetuning as tictactoe
+    b = tictactoe.BoardState()
+    b.make_move( 0, 0, 'x' )
+    print( b )
+    # output:
+    # x - -
+    # - - -
+    # - - -
